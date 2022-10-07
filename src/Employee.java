@@ -16,7 +16,7 @@ public class Employee {
     }
 
     public double bonus() {
-        return workHours > 40 ? (workHours - 40) * 30 : 0;
+        return workHours > 40 ? (workHours - 40) * 30 *4 : 0;
     }
 
     public double raiseSalary() {

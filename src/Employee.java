@@ -16,20 +16,19 @@ public class Employee {
     }
 
     public double bonus() {
-        return workHours > 40 ? (workHours - 40) * 30 * 4 : 0;
+        return workHours > 40 ? (workHours - 40) * 30  : 0;
     }
 
     public double raiseSalary() {
         double salaryRaise = 0;
-        double netSalary = salary + bonus() - tax();
         int workedYears = 2021 - hireYear;
         if (workedYears < 10) {
-            salaryRaise = netSalary * 0.05;
+            salaryRaise = salary * 0.05;
 
         } else if (workedYears < 20)
-            salaryRaise = netSalary * 0.1;
+            salaryRaise = salary * 0.1;
         else
-            salaryRaise = netSalary * 0.15;
+            salaryRaise = salary * 0.15;
         return salaryRaise;
     }
 
@@ -43,7 +42,7 @@ public class Employee {
         System.out.println("BONUS   :" + bonus());
         System.out.println("MAAŞ ARTIŞI     :" + raiseSalary());
         System.out.println("VERGİ VE BONUSLARLA BİRLİKTE MAAŞ   :" + (salary + bonus() - tax()));
-        System.out.println("YENİ NET MAAŞ   " + (raiseSalary() + salary + bonus() - tax()));
+        System.out.println("YENİ NET MAAŞ   " + (raiseSalary() + salary ));
         return "ADI-SOYADI  :" + name + "\n" +
                 "MAAŞI   :" + salary + "\n" +
                 "ÇALIŞMA SAATİ   :" + workHours + "\n" +
@@ -52,7 +51,7 @@ public class Employee {
                 "BONUS   :" + bonus() + "\n" +
                 "MAAŞ ARTIŞI     :" + raiseSalary() + "\n" +
                 "VERGİ VE BONUSLARLA BİRLİKTE MAAŞ  " + (salary + bonus() - tax()) + "\n" +
-                "YENİ NET MAAŞ  :" + (raiseSalary() + salary + bonus() - tax()) + "\n";
+                "YENİ NET MAAŞ  :" + (raiseSalary() + salary ) + "\n";
 
     }
 }

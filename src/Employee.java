@@ -16,7 +16,7 @@ public class Employee {
     }
 
     public double bonus() {
-        return workHours > 40 ? (workHours - 40) * 30 *4 : 0;
+        return workHours > 40 ? (workHours - 40) * 30 * 4 : 0;
     }
 
     public double raiseSalary() {
@@ -44,7 +44,7 @@ public class Employee {
         System.out.println("MAAŞ ARTIŞI     :" + raiseSalary());
         System.out.println("VERGİ VE BONUSLARLA BİRLİKTE MAAŞ   :" + (salary + bonus() - tax()));
         System.out.println("YENİ NET MAAŞ   " + (raiseSalary() + salary + bonus() - tax()));
-        return  "ADI-SOYADI  :" + name + "\n" +
+        return "ADI-SOYADI  :" + name + "\n" +
                 "MAAŞI   :" + salary + "\n" +
                 "ÇALIŞMA SAATİ   :" + workHours + "\n" +
                 "İŞE BAŞLANGIÇ YILI  :" + hireYear + "\n" +
